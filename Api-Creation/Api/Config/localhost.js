@@ -1,0 +1,9 @@
+module.exports={
+    USER:"postgres",
+    HOST:"amicongl.amicodevelopment.net",
+    DATABASE:"test-db",
+    PASSWORD:"amico123",
+    PG_PORT:"5432",
+    PORT:8000,
+    JWT_SECRET_KEY:"token123"
+}

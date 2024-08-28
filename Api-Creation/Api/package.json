@@ -1,0 +1,23 @@
+{
+  "name": "api-creation",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "bin": {
+    "api-creation": "bin/setup_env.js"
+  },
+  "scripts": {
+    "start": "nodemon bin/setup_env.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "bcrypt": "^5.1.1",
+    "express": "^4.19.2",
+    "http": "^0.0.1-security",
+    "jsonwebtoken": "^9.0.2",
+    "morgan": "^1.10.0",
+    "nodemon": "^3.1.4",
+    "pg": "^8.12.0"
+  }
+}

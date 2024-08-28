@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"
+        integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+        integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>view</title>
+</head>
+
+<body>
+    <div class="card offset-4 bg-warning bg-opacity-50 rounded-5 mt-5 shadow-lg" style="width: 22rem;">
+            <h1 class="text-center mt-5 fw-bold fs-1 text-success">
+                <div class="text-uppercase text-decoration-underline" id="uinfo">
+                <i class="fa-solid fa-circle-info"></i> User Info
+            </div>
+            </h1>
+        <div class="card-body">
+            <div class="text-center mt-2 fw-semibold fs-3 text-primary">
+                <label class="fw-bold fs-2 text-uppercase"><i class="fa-solid fa-id-card-clip"></i> User Id:</label><br>
+                <span class="fw-bold fs-3" id="view">
+                    <%= id%>
+                </span><br>
+                <label class="fw-bold fs-2 text-uppercase"><i class="fa-solid fa-user"></i> Name:</label><br>
+                <span class="fw-bold fs-3" id="vname"></span><br>
+                <label class="fw-bold fs-2 text-uppercase"><i class="fa-solid fa-envelope"></i> Email:</label><br>
+                <span class="fw-bold fs-3" id="vemail"></span><br>
+                <label class="fw-bold fs-2 text-uppercase"><i class="fa-solid fa-phone"></i> Phone:</label><br>
+                <span class="fw-bold fs-3" id="vphone"></span>
+            </div>
+        </div>
+    </div>
+
+
+</body>
+<script>
+    let id = '<%= id%>'
+
+    // window.onload=()=>{document.getElementById('view')} 
+    doAjax()
+
+
+    async function doAjax() {
+        try {
+            let result = await $.ajax({ method: 'get', url: `/users/view?id=${id}` })
+            // console.log(result.users)
+            let view = result.users
+            // console.log(result.users)
+            // $('#view').html(JSON.stringify(view))
+            let name = view.name
+            $('#vname').html(name)
+            let email = view.email
+            $('#vemail').html(email)
+            let phone = view.phone
+            $('#vphone').html(phone)
+        } catch (err) {
+            console.log(err)
+        }
+    }
+</script>
+
+</html>

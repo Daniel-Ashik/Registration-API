@@ -1,0 +1,69 @@
+#login:hover{
+    background-color:red;
+}
+#login-input:hover{
+    background-color: rgb(236, 232, 232);
+}
+#login-title:hover{
+    color: green;
+}
+#register-title:hover{
+    color:green;
+}
+#submit:hover{
+    background-color:red;
+}
+#home-input:hover{
+    background-color: rgb(236, 232, 232);
+}
+#head{
+    color: black;
+}
+#head:hover{
+    color: green;
+}
+#user-detail:hover{
+    color: green;
+}
+#name1:hover{
+    background-color: rgb(236, 232, 232);
+}
+#phone1:hover{
+    background-color: rgb(236, 232, 232);
+}
+#email1:hover{
+    background-color: rgb(236, 232, 232);
+}
+#pass:hover{
+    background-color: rgb(236, 232, 232);
+}
+#email:hover{
+    background-color: rgb(236, 232, 232);
+}
+#name:hover{
+    background-color: rgb(236, 232, 232);
+}
+#pupdate:hover{
+    color: #EFC050;
+}
+#ubtn:hover{
+    background-color: red;
+}
+#sbtn:hover{
+    background-color: red;
+}
+#udetail:hover{
+    color: green;
+}
+#view:hover{
+    background-color: red;
+}
+#dlt:hover{
+    background-color: red;
+}
+#uinfo:hover{
+    color: white;
+}
+#welcome-card{
+    margin-left: 32%;
+}
